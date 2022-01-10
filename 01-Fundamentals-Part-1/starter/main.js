@@ -14,5 +14,11 @@ function getBMI(mass, height) {
 const mark = getBMI(markWeight, markHeight);
 const john = getBMI(johnWeight, johnHeight);
 
-console.log(mark);
-console.log(john);
+if (mark > john) {
+  console.log(`Mark's BMI (${mark}) is higher than John's (${john})`);
+} else {
+  console.log(`Johns's BMI (${john}) is higher than Mark's (${mark})`);
+}
+
+// console.log(mark);
+// console.log(john);
