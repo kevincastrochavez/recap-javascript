@@ -85,18 +85,45 @@
 
 // Coding Challenge #6
 
-const calcTip = (bill) => {
-  const billCost = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = (bill) => {
+//   const billCost = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-  return billCost;
+//   return billCost;
+// };
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(bills, tips);
+
+// const total = tips.map((tip, index) => {
+//   return tip + bills[index];
+// });
+
+// console.log(total);
+
+// Coding Challenge #7
+
+const mark = {
+  fullName: 'Mark MIller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+  },
 };
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(bills, tips);
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
 
-const total = tips.map((tip, index) => {
-  return tip + bills[index];
-});
+    return this.bmi;
+  },
+};
 
-console.log(total);
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi);
+console.log(john.bmi);
