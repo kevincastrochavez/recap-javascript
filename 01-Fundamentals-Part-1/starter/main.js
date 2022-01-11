@@ -31,8 +31,27 @@ const koalas = [88, 91, 110];
 
 const dolphinsaverage =
   dolphins.reduce((prev, curr) => prev + curr) / dolphins.length;
-console.log(dolphinsaverage);
+// console.log(dolphinsaverage);
 
 const koalasaverage =
   koalas.reduce((prev, curr) => prev + curr) / koalas.length;
-console.log(koalasaverage);
+// console.log(koalasaverage);
+
+// Coding Challenge #4
+
+const percentage = 0.15;
+function calculateTip(subtotal) {
+  const amount =
+    subtotal > 50 && subtotal < 300 ? subtotal * percentage : subtotal * 0.2;
+  const total = amount + subtotal;
+
+  return total;
+}
+
+const billOne = calculateTip(275);
+const billTwo = calculateTip(40);
+const billThree = calculateTip(430);
+
+console.log(billOne);
+console.log(billTwo);
+console.log(billThree);
