@@ -58,27 +58,45 @@
 
 // Coding Challenge #5
 
-const dolphins = [44, 23, 71];
-const koalas = [65, 54, 49];
+// const dolphins = [44, 23, 71];
+// const koalas = [65, 54, 49];
 
-const calcAverage = (array) => {
-  const average = array.reduce((prev, curr) => prev + curr) / array.length;
+// const calcAverage = (array) => {
+//   const average = array.reduce((prev, curr) => prev + curr) / array.length;
 
-  return average;
+//   return average;
+// };
+
+// const dolphinsAverage = calcAverage(dolphins);
+// const koalasAverage = calcAverage(koalas);
+
+// console.log(dolphinsAverage);
+// console.log(koalasAverage);
+
+// const checkWinner = (averageOne, averageTwo) => {
+//   if (averageOne > averageTwo) {
+//     console.log(`Dolphins win (${averageOne} vs (${averageTwo})`);
+//   } else {
+//     console.log(`Koalas win (${averageTwo} vs ${averageOne})`);
+//   }
+// };
+
+// checkWinner(dolphinsAverage, koalasAverage);
+
+// Coding Challenge #6
+
+const calcTip = (bill) => {
+  const billCost = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+  return billCost;
 };
 
-const dolphinsAverage = calcAverage(dolphins);
-const koalasAverage = calcAverage(koalas);
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tips);
 
-console.log(dolphinsAverage);
-console.log(koalasAverage);
+const total = tips.map((tip, index) => {
+  return tip + bills[index];
+});
 
-const checkWinner = (averageOne, averageTwo) => {
-  if (averageOne > averageTwo) {
-    console.log(`Dolphins win (${averageOne} vs (${averageTwo})`);
-  } else {
-    console.log(`Koalas win (${averageTwo} vs ${averageOne})`);
-  }
-};
-
-checkWinner(dolphinsAverage, koalasAverage);
+console.log(total);
