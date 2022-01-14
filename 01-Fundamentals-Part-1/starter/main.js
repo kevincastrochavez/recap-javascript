@@ -103,27 +103,27 @@
 
 // Coding Challenge #7
 
-const mark = {
-  fullName: 'Mark MIller',
-  mass: 78,
-  height: 1.69,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-  },
-};
+// const mark = {
+//   fullName: 'Mark MIller',
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//   },
+// };
 
-const john = {
-  fullName: 'John Smith',
-  mass: 92,
-  height: 1.95,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
+// const john = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
 
-    return this.bmi;
-  },
-};
+//     return this.bmi;
+//   },
+// };
 
-mark.calcBMI();
-john.calcBMI();
-console.log(mark.bmi);
-console.log(john.bmi);
+// mark.calcBMI();
+// john.calcBMI();
+// console.log(mark.bmi);
+// console.log(john.bmi);
