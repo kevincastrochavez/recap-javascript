@@ -127,3 +127,39 @@
 // john.calcBMI();
 // console.log(mark.bmi);
 // console.log(john.bmi);
+
+// Coding Challenge #8
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+const calcTip = (bill) => {
+  const billCost = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+  return billCost;
+};
+
+bills.forEach((bill) => {
+  const tip = calcTip(bill);
+  tips.push(tip);
+
+  const total = bill + tip;
+  totals.push(total);
+});
+
+console.log(tips);
+console.log(totals);
+
+const calcAverage = (arr) => {
+  const average = arr.reduce((prev, curr) => prev + curr) / arr.length;
+
+  return average;
+};
+
+const tipsAverage = calcAverage(tips);
+const totalsAverage = calcAverage(totals);
+
+console.log(tipsAverage);
+console.log(totalsAverage);
